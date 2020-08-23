@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{101D6F0B-CA9F-4276-A3A4-15FAFC11A613}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PointRunner</RootNamespace>
+    <AssemblyName>PointRunner</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PointRunnerMain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FullScreenImplement\FullScreenImplement.csproj">
+      <Project>{2792cfce-4fdb-486a-a87f-f9c5387f2d9a}</Project>
+      <Name>FullScreenImplement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HardDrive\HardDrive.csproj">
+      <Project>{6c5518ac-7af4-4507-bcef-70c1f54a7ffc}</Project>
+      <Name>HardDrive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PointInteractor\PointInteractor.csproj">
+      <Project>{a280c02f-df89-424d-9691-b6595cc5e452}</Project>
+      <Name>PointInteractor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PointPresenterController\PointPresenterController.csproj">
+      <Project>{c11ca1ef-14b9-4ba7-8034-d17b6badadde}</Project>
+      <Name>PointPresenterController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PointViewWPF\PointViewWPF.csproj">
+      <Project>{053008ab-a0d2-4c48-84c7-fe4754cdf2a7}</Project>
+      <Name>PointViewWPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLserverConnect\SQLserverConnect.csproj">
+      <Project>{d4b5469e-00f0-41ca-9eec-9b5891ba05ce}</Project>
+      <Name>SQLserverConnect</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
