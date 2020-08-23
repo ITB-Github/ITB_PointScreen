@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointPresenterController", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointRunner", "PointRunner\PointRunner.csproj", "{101D6F0B-CA9F-4276-A3A4-15FAFC11A613}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soluntion Files", "Soluntion Files", "{8E15D311-178D-4266-8BC2-76D0CC2B37B9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedPointTest\SharedPointTest.projitems*{527b37e4-62b8-443e-aac7-cf638bdfdc20}*SharedItemsImports = 4
